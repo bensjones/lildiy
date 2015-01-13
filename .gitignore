@@ -1,3 +1,6 @@
+# giu generated files
+.idea
+
 # Logs
 logs
 *.log
