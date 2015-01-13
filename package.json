@@ -1,0 +1,20 @@
+{
+  "author": "Ben Jones <ben@pdxdiy.org>",
+  "name": "lildiy",
+  "description": "A little version of diy.org",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bensjones/lildiy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bensjones/lildiy.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.9.0",
+    "handlebars": "2.0.0",
+    "diy": "~1.1.0"
+  }
+}
