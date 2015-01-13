@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lil'DIY | Explore</title>
+        <link href="/public/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="featured">
+            <h1>Featured</h1>
+            {{#each featuredData}}
+                <div class="project-preview">
+                    <img src="{{image}}" alt="{{title}}" title="{{title}} by {{nickname}}"/>
+                </div>
+            {{/each}}
+        </div>
+    </body>
+</html>

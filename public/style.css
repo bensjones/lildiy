@@ -1,0 +1,14 @@
+.project-preview {
+    float: left;
+}
+
+.project-preview img {
+    height: 50px;
+    margin: 1px;
+    width: 50px;
+}
+
+.project-preview img:hover {
+    margin: 0;
+    border: 1px solid #666666;
+}
