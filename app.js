@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
     uri: '/explore/featured'
   }, function (err, body) {
     var data = {};
-    data.featuredData = filterData(body.response);
+    data.featuredData = filterData('featured',body.response);
     var pageText = pageBuilder(data);
     res.write(pageText);
     res.end();
