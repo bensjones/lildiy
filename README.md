@@ -17,3 +17,6 @@ A lil node website using the diy.org api
 7. Add Time Stamps with humanize date
 8. Add New Members and Trending to home
 9. Create maker page
+
+#Other Considerations
+1. May have been too soon in creating the filter helper function. Feels like premature optimzation.
