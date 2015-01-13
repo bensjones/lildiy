@@ -12,3 +12,35 @@
     margin: 0;
     border: 1px solid #666666;
 }
+
+#project {
+    width: 480px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+#details {
+    margin: 20px;
+}
+
+#details img {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+#details h1 {
+    margin: 0;
+    margin-left: 75px;
+}
+
+#details p {
+    margin: 0;
+    margin-left: 75px;
+}

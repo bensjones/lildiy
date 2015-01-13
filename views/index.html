@@ -9,7 +9,9 @@
             <h1>Featured</h1>
             {{#each featuredData}}
                 <div class="project-preview">
-                    <img src="{{image}}" alt="{{title}}" title="{{title}} by {{nickname}}"/>
+                    <a href="/makers/{{url}}/projects/{{projectId}}">
+                        <img src="{{image}}" alt="{{title}}" title="{{title}} by {{nickname}}"/>
+                    </a>
                 </div>
             {{/each}}
         </div>

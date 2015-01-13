@@ -21,7 +21,21 @@ app.get('/', function(req, res) {
     res.write(pageText);
     res.end();
   });
+});
 
+app.get('/makers/:url/projects/:projectId', function(req, res){
+
+  var template = fs.readFileSync("views/project.html", "utf8");
+  var pageBuilder = handlebars.compile(template);
+
+  diy({
+    method: 'GET',
+    uri: '/makers/' + req.params.url + '/projects/' + req.params.projectId
+  }, function (err, body) {
+    var pageText = pageBuilder(filterData('project', body.response));
+    res.write(pageText);
+    res.end();
+  });
 });
 
 app.listen(3001);
@@ -29,14 +43,24 @@ app.listen(3001);
 /*
  helper function to filter out a small set of a response body
  */
-function filterData(data) {
-  return data.map(function(item) {
-    return {
-      projectId: item.id,
-      stamp: item.stamp,
-      title: item.title,
-      nickname: item.maker.nickname,
-      image: item.clips[0].assets.web_220.url
-    }
-  });
+function filterData(dataType, data) {
+  switch (dataType) {
+    case 'featured':
+      return data.map(function (item) {
+        return {
+          projectId: item.id,
+          title: item.title,
+          nickname: item.maker.nickname,
+          url: item.maker.url,
+          image: item.clips[0].assets.web_220.url
+        }
+      });
+    case 'project':
+        return {
+          avatar: data.maker.avatar.small.url,
+          title: data.title,
+          nickname: data.maker.nickname,
+          image: data.clips[0].assets.web_480.url
+        }
+  }
 }
