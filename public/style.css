@@ -3,9 +3,7 @@
 }
 
 .project-preview img {
-    height: 50px;
     margin: 1px;
-    width: 50px;
 }
 
 .project-preview img:hover {
@@ -31,16 +29,15 @@
 
 #details img {
     float: left;
+    
     height: 50px;
     width: 50px;
 }
 
 #details h1 {
-    margin: 0;
-    margin-left: 75px;
+    margin: 0 0 0 75px;
 }
 
 #details p {
-    margin: 0;
-    margin-left: 75px;
+    margin: 0 0 0 75px;
 }
