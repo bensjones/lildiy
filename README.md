@@ -19,4 +19,4 @@ A lil node website using the diy.org api
 9. Create maker page
 
 #Other Considerations
-1. May have been too soon in creating the filter helper function. Feels like premature optimzation.
+1. May have been too soon in creating the filter helper function. Feels like premature optimization.
